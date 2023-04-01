@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom'
-import { HelloWorld } from './HelloWorld'
+import { App } from './App';
 
 const root = document.querySelector("#root");
 
-ReactDOM.render(<HelloWorld/>, root)
+ReactDOM.render(<App/>, root)
