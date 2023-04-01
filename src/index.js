@@ -3,14 +3,8 @@ import ReactDOM from 'react-dom'
 
 const root = document.getElementById("root");
 
-function addName(name){
-    return (
-        <div>
-            <h1>Hello {name}!</h1>
-        </div>
-    )
+function sum(a,b){
+    return <h2>{a} + {b} = {a + b}</h2>
 }
 
-//We can't send a jsx expression plainly to a parameter.
-
-ReactDOM.render(addName(<p>John<p/>), root);
+ReactDOM.render(sum(12,8), root);
