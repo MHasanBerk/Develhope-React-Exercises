@@ -12,6 +12,6 @@ function addName(name){
     )
 }
 
-//Without a variable inside the function, it ignores 
+//It ignores the "undefined" name variable.
 
 ReactDOM.render(addName(), root);
