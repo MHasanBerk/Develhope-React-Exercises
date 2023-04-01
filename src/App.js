@@ -1,5 +1,6 @@
 import React from "react";
 import { HelloWorld } from "./HelloWorld";
+import Message from "./Message";
 
 
 export class App extends React.Component{
@@ -7,14 +8,10 @@ export class App extends React.Component{
         return(
             <div>
                 <HelloWorld />
-                <HelloWorld />
-                <HelloWorld />
-                <HelloWorld />
-                <HelloWorld />
+                <Message />
             </div>
         )
     }
 }
 
-// Yes, we can use hello component more than once. For example in this code block,
-// it will render 5 times.
+//Yes, we can use 'Message' component inside of our 'App' component. But we must import it first.
