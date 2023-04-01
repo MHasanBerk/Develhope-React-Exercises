@@ -3,6 +3,6 @@ import { App } from './App';
 
 const root = document.querySelector("#root");
 
-//I already did this exercise from previous exercises.
+//It works as expected.
 
 ReactDOM.render(<App/>, root)
