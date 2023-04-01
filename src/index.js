@@ -7,11 +7,10 @@ function addName(name){
     return (
         <div>
             <h1>Hello {name}!</h1>
-            <h3>Type of: {typeof(name)}</h3>
         </div>
     )
 }
 
-//It ignores the "undefined" name variable.
+//We can't send a jsx expression plainly to a parameter.
 
-ReactDOM.render(addName(), root);
+ReactDOM.render(addName(<p>John<p/>), root);
