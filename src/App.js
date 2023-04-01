@@ -3,6 +3,6 @@ import { Welcome } from "./Welcome"
 
 export class App extends React.Component{
     render(){
-        return <Welcome/>
+        return <Welcome age={22}/>
     }
 }
