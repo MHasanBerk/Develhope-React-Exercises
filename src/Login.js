@@ -1,10 +1,11 @@
 import React from "react";
 
 export class Login extends React.Component{
+
     state = {
         username : '',
         password : '',
-        remember : false
+        remember : false,
     }
 
     handleInputChange = (event) => {
@@ -18,7 +19,23 @@ export class Login extends React.Component{
         })
     }
 
+    onLogin = () => {
+        this.setState({
+            username: this.state.username,
+            password: this.state.password
+        })
+        console.log(this.state)
+    }
+
     render(){
+        let isDisabled;
+        
+        if(this.state.username === "" || this.state.password === ""){
+            isDisabled = true;
+        }else{
+            isDisabled = false;
+        }
+        
         return(
             <div>
                 <h1>Login Form</h1>
@@ -34,6 +51,7 @@ export class Login extends React.Component{
                     Checkbox:
                     <input name="remember" type="checkbox" checked={this.state.remember} onChange={this.handleInputChange}/>
                 </label>
+                <button onClick={this.onLogin} disabled={isDisabled}>Login</button>
             </div>
         )
     }
