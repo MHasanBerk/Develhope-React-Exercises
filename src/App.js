@@ -7,6 +7,7 @@ import { Login } from "./Login";
 import { TodoList } from "./TodoList";
 import { Welcome } from "./Welcome";
 import { Container } from "./Container";
+import { Sum } from "./Sum";
 
 export class App extends React.Component{
     render(){
@@ -18,6 +19,7 @@ export class App extends React.Component{
                 <ClickTracker />
                 <Login/>
                 <TodoList />
+                <Sum numbers={[1,2,3,4]}/>
             </Container>
         )
     }
