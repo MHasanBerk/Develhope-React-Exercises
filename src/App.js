@@ -11,7 +11,7 @@ import { Container } from "./Container";
 export class App extends React.Component{
     render(){
         return (
-            <Container>
+            <Container title="My App">
                 <Welcome />
                 <Counter initialValue={10} incrementBy={2} timeout={2000}/>
                 <ClickCounter incrementBy={2}/>
