@@ -3,3 +3,8 @@
     border: 2.5px solid black;
     text-align: center;
 }
+
+.container {
+    background-color: white;
+    border: 3px solid red;
+}
