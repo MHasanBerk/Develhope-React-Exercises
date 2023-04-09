@@ -7,6 +7,12 @@ import { Login } from "./Login";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Colors } from "./Colors";
 
+const colors = [
+    {id : 1, name: "red"},
+    {id : 2, name: "blue"},
+    {id : 3, name: "green"}
+]
+
 export class App extends React.Component{
     render(){
         return (
@@ -16,7 +22,7 @@ export class App extends React.Component{
                 <ClickCounter incrementBy={2}/>
                 <ClickTracker />
                 <Login/>
-                <Colors items={["red","blue","black"]}/>
+                <Colors items={colors}/>
             </div>
         )
     }
