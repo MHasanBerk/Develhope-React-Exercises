@@ -11,7 +11,12 @@ export class TodoList extends React.Component {
       items: [...this.state.items, newItem]
     });
     document.getElementById('newItem').value = "";
-    //I already added from before
+  }
+
+  handleReset = () => {
+    this.setState({
+        items: []
+    })
   }
 
   render() {
@@ -24,6 +29,7 @@ export class TodoList extends React.Component {
         </ul>
         <input id="newItem" />
         <button onClick={this.handleClick}>Add Item</button>
+        <button onClick={this.handleReset}>Reset</button>
       </div>
     );
   }
