@@ -5,12 +5,13 @@ import { ClickTracker } from "./ClickTracker";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { TodoList } from "./TodoList";
+import { Welcome } from "./Welcome";
 
 export class App extends React.Component{
     render(){
         return (
             <div>
-                <InteractiveWelcome />
+                <Welcome />
                 <Counter initialValue={10} incrementBy={2} timeout={2000}/>
                 <ClickCounter incrementBy={2}/>
                 <ClickTracker />

@@ -4,14 +4,9 @@ import { Age } from './Age'
 export class Welcome extends React.Component{
     render(){
         return (
-            <div>
-                <p>Hello, {this.props.name}</p>
-                <Age age={19}/>
+            <div className='welcome'>
+                <h1>Hello World!</h1>
             </div>
         )
     }
-}
-
-Welcome.defaultProps = {
-    name: "John",
 }
