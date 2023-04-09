@@ -10,7 +10,8 @@ export class TodoList extends React.Component {
     this.setState({
       items: [...this.state.items, newItem]
     });
-    document.getElementById('newItem').value = '';
+    document.getElementById('newItem').value = "";
+    //I already added from before
   }
 
   render() {
