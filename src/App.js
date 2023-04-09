@@ -5,6 +5,7 @@ import { ClickTracker } from "./ClickTracker";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { UncontrolledLogin } from "./UncontrolledLogin";
+import { Colors } from "./Colors";
 
 export class App extends React.Component{
     render(){
@@ -14,7 +15,8 @@ export class App extends React.Component{
                 <Counter initialValue={10} incrementBy={2} timeout={2000}/>
                 <ClickCounter incrementBy={2}/>
                 <ClickTracker />
-                <UncontrolledLogin/>
+                <Login/>
+                <Colors items={["red","blue","black"]}/>
             </div>
         )
     }
