@@ -19,8 +19,12 @@ export class TodoList extends React.Component {
     })
   }
 
+  handleRemove = (event) => {
+    event.target.parentElement.remove()
+  }
+
   render() {
-    const itemsList = this.state.items.map((item) => <li>{item}</li>);
+    const itemsList = this.state.items.map((item) => <li>{item} <button onClick={this.handleRemove}>Remove</button></li>);
 
     return (
       <div>
