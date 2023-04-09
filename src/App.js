@@ -4,14 +4,7 @@ import { ClickCounter } from "./ClickCounter";
 import { ClickTracker } from "./ClickTracker";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
-import { UncontrolledLogin } from "./UncontrolledLogin";
-import { Colors } from "./Colors";
-
-const colors = [
-    {id : 1, name: "red"},
-    {id : 2, name: "blue"},
-    {id : 3, name: "green"}
-]
+import { TodoList } from "./TodoList";
 
 export class App extends React.Component{
     render(){
@@ -22,7 +15,7 @@ export class App extends React.Component{
                 <ClickCounter incrementBy={2}/>
                 <ClickTracker />
                 <Login/>
-                <Colors items={colors}/>
+                <TodoList />
             </div>
         )
     }
