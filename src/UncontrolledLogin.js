@@ -17,20 +17,16 @@ export class UncontrolledLogin extends React.Component{
         })
     }
 
-    
+    componentDidMount(){
+        this._myRef.current.focus();
+    }
+
     render(){
-        // const isUsernameEmpty = this._myRef.current.elements.username.value === ""
-        // const isPasswordEmpty = this._myRef.current.elements.password.value === ""
-        
-        // const isDisabled = isUsernameEmpty || isPasswordEmpty ? true : false
-
-        //I couldn't manage to do add disabled attribute to login button. I tried to use ref but I get null when the code runs.
-
         return(
-            <form ref={this._myRef} onSubmit={this.handleFormSubmit}>
+            <form onSubmit={this.handleFormSubmit}>
                 <label>
                     Username:
-                    <input name="username"/>
+                    <input name="username" ref={this._myRef}/>
                 </label>
                 <label>
                     Password:
@@ -40,7 +36,7 @@ export class UncontrolledLogin extends React.Component{
                     Remember Me
                     <input name="remember" type="checkbox"/>
                 </label>
-                <button ref={this._myRef} type="submit">Login</button>
+                <button type="submit">Login</button>
                 <button type="reset">Reset</button>
             </form>
         )
