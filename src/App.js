@@ -19,7 +19,7 @@ export class App extends React.Component{
                 <ClickTracker />
                 <Login/>
                 <TodoList />
-                <Sum numbers={[1,2,3,4]}/>
+                <Sum/>
             </Container>
         )
     }
