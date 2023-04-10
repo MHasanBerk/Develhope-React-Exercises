@@ -24,12 +24,12 @@ export class TodoList extends React.Component {
   }
 
   render() {
-    const itemsList = this.state.items.map((item) => <li>{item} <button onClick={this.handleRemove}>Remove</button></li>);
+    // const itemsList = this.state.items.map((item) => <li>{item} <button onClick={this.handleRemove}>Remove</button></li>);
 
     return (
       <div>
         <ul>
-          {itemsList}
+          {this.props.children(this.state.items,this.handleRemove)}
         </ul>
         <input id="newItem" />
         <button onClick={this.handleClick}>Add Item</button>

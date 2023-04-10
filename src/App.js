@@ -2,7 +2,6 @@ import React from "react";
 import { Counter } from "./Counter";
 import { ClickCounter } from "./ClickCounter";
 import { ClickTracker } from "./ClickTracker";
-import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { TodoList } from "./TodoList";
 import { Welcome } from "./Welcome";
@@ -18,7 +17,15 @@ export class App extends React.Component{
                 <ClickCounter incrementBy={2}/>
                 <ClickTracker />
                 <Login/>
-                <TodoList />
+                <TodoList>
+                    {(items, handleRemove) => (items.map((item) => 
+                        <li>
+                            {item} <button onClick={handleRemove}>Remove</button>
+                        </li>
+                        )
+                    )
+                }
+                </TodoList>
                 <Sum/>
             </Container>
         )
