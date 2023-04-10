@@ -7,6 +7,7 @@ import { TodoList } from "./TodoList";
 import { Welcome } from "./Welcome";
 import { Container } from "./Container";
 import { Sum } from "./Sum";
+import { DisplayLanguage } from "./DisplayLanguage";
 
 export class App extends React.Component{
     render(){
@@ -27,6 +28,7 @@ export class App extends React.Component{
                 }
                 </TodoList>
                 <Sum/>
+                <DisplayLanguage/>
             </Container>
         )
     }
