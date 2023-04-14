@@ -9,13 +9,14 @@ import { Container } from "./Container";
 import { Sum } from "./Sum";
 import { DisplayLanguage } from "./DisplayLanguage";
 import GithubUser from "./GithubUser";
+import { GithubUserList } from "./GithubUserList";
 
 export class App extends React.Component{
     render(){
         return (
             <Container title="My App">
                 <Welcome />
-                <GithubUser username="mhasanberk"/>
+                <GithubUserList />
             </Container>
         )
     }

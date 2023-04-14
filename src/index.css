@@ -8,3 +8,11 @@
     background-color: white;
     border: 3px solid red;
 }
+
+.userlist {
+    margin: 1rem;
+}
+
+.userlist li{
+    list-style-type: none;
+}

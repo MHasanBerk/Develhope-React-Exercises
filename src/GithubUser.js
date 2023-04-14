@@ -41,6 +41,7 @@ export default function GithubUser({username}){
                     <h3>Username: {data.login}</h3>
                     <h3>Name: {data.name}</h3>
                     <h3>ID: {data.id}</h3>
+                    <hr />
                 </>
             )}
         </div>
