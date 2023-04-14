@@ -8,6 +8,7 @@ import { Welcome } from "./Welcome";
 import { Container } from "./Container";
 import { Sum } from "./Sum";
 import { DisplayLanguage } from "./DisplayLanguage";
+import { CarDetails } from "./CarDetails";
 
 export class App extends React.Component{
     render(){
@@ -27,6 +28,7 @@ export class App extends React.Component{
                     )
                 }
                 </TodoList>
+                <CarDetails initialData={{model: "Volvo S90", year: 2022, color: "White"}}/>
                 <Sum/>
                 <DisplayLanguage/>
             </Container>
