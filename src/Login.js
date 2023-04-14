@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export function Login(){
     const [data,setData] = useState({
@@ -6,6 +6,12 @@ export function Login(){
         password: "",
         remember: false
     })
+    const inputRef = useRef()
+
+    useEffect(() => {
+        inputRef.current.focus()
+    },[])
+
     function handleSubmit(e){
         e.preventDefault();
     }
@@ -46,7 +52,7 @@ export function Login(){
             <h1>Login Form</h1>
             <label>
                 Username:
-                <input name="username" value={data.username} onChange={handleInputChange}/>
+                <input name="username" value={data.username} onChange={handleInputChange} ref={inputRef}/>
             </label>
             <label>
                 Password:
