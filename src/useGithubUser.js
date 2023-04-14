@@ -33,4 +33,5 @@ export function useGithubUser(username){
     }, [username])
 
     return({data, loading, error})
+    //Already did the loading and error status before.
 }
