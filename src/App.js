@@ -15,7 +15,7 @@ export class App extends React.Component{
             <Container title="My App">
                 <Welcome />
                 <Counter initialValue={10} incrementBy={2} timeout={2000}/>
-                <ClickCounter incrementBy={2}/>
+                <ClickCounter incrementBy={2} onCounterChange={(counter) => console.log("The Counter is now: " + counter)}/>
                 <ClickTracker />
                 <Login/>
                 <TodoList>

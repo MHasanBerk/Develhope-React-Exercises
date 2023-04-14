@@ -1,11 +1,16 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
-export function ClickCounter({initialValue = 0}){
+export function ClickCounter({initialValue = 0, onCounterChange}){
     const [counter,setCounter] = useState(initialValue)
 
     function handleCounterIncrement(){
         setCounter((callbackCounter) => (callbackCounter + 1))
     }
+
+    useEffect(() => {
+        onCounterChange(counter)
+    },[counter,onCounterChange])
+
     return(
         <div>
             <h3>Counter: {counter}</h3>
