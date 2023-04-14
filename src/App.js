@@ -16,6 +16,7 @@ export class App extends React.Component{
         return (
             <Container title="My App">
                 <Welcome />
+                <ClickCounter />
                 <GithubUserList />
             </Container>
         )

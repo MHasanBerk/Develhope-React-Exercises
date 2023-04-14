@@ -1,20 +1,14 @@
-import { useEffect, useState } from "react"
+import { useCounter } from "./useCounter"
 
-export function ClickCounter({initialValue = 0, onCounterChange}){
-    const [counter,setCounter] = useState(initialValue)
-
-    function handleCounterIncrement(){
-        setCounter((callbackCounter) => (callbackCounter + 1))
-    }
-
-    useEffect(() => {
-        onCounterChange(counter)
-    },[counter,onCounterChange])
+export function ClickCounter({initialValue = 0}){
+    const {counter, onIncrement, onDecrement, onReset} = useCounter(initialValue)
 
     return(
         <div>
             <h3>Counter: {counter}</h3>
-            <button onClick={handleCounterIncrement}>Increment</button>
+            <button onClick={onIncrement}>Increment</button>
+            <button onClick={onDecrement}>Decrement</button>
+            <button onClick={onReset}>Reset</button>
         </div>
     )
 }
